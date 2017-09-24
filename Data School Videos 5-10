@@ -1,0 +1,40 @@
+Notes on Data School -- videos 5-10
+
+5) Rename Columns in a Pandas DataFrame
+
+Method 1:
+
+    ***ufo = pd.read_csv('http://bit.ly/uforeports')
+
+    ***These are the columns we have to work with: ufo.columns
+
+    ***ufo.rename(columns = {'Colors Reported':"Colors_Reported", "Shape Reported": "Shape_Reported"}, inplace=True) old names: new names
+
+    ***run: ufo.columns again to see the new names
+
+    inplace = True => this means I want this operation to occur inplace
+    Basically makes our changes official
+
+Method 2: Replace all the column names (line 9)
+
+    ***ufo = pd.read_csv('http://bit.ly/uforeports', names = ufo_cols, header = 0)
+
+    header = 0, row 0 has existing column names and we will pass the new column names. Essentially writing over the old column names
+
+    ***ufo.columns
+
+    ***ufo.columns = ufo.columns.str.replace(' ','_')
+
+    ***ufo.columns
+
+6) Removing Columns from a Pandas DataFrame
+
+    An axis is just a direction, think of x-y axis. X is horizontal, Y is vertical
+
+7) Sorting a Pandas DataFrame/Series
+
+8) Filtering Rows of a Pandas DataFrame by Column Vale
+
+9) Applying Multiple Filter Criteria to a Pandas DataFrame
+
+10) Pandas Questions Answered
